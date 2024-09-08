@@ -7,14 +7,15 @@ library(kinship2)   # For calculating kinship
 library(officer)    # For creating Word documents
 library(flextable)  # For formatting tables in Word documents
 
+# assuming that you have merged_data from previus script
 # Step 1: Data Correction
 # Function to correct missing birth dates using 'anno' column and handle format issues
-#in some cases i just have year of birth without day and month
+#in some cases i just have year of birth without day and month, so arbitrary was set as year-1th-january
 correct_missing_birth_dates <- function(data) {
   data <- data %>%
-    mutate(DATA_NASCI = ifelse(is.na(DATA_NASCI), 
-                               paste(anno, "01", "01", sep = "-"), 
-                               DATA_NASCI))
+    mutate(birth_date = ifelse(is.na(birth_date), 
+                               paste(year, "01", "01", sep = "-"), 
+                               birth_date))
   
   return(data)
 }
@@ -50,15 +51,16 @@ if (length(missing_dams) > 0) {
   merged_data <- rbind(merged_data, new_dams)
 }
 
+# #########################################################
 # Step 4: Calculate Inbreeding Coefficients... just another methods (not run)
-#sex <- ifelse(merged_data$SESSO_COD == 1, "M", "F")
+#sex <- ifelse(merged_data$Sex== 1, "M", "F")
 #ped <- pedigree(id = merged_data$Progeny, dadid = merged_data$Sire, momid = merged_data$Dam, sex = sex)
 #A <- kinship(ped)
 #inbreeding_coefficients <- diag(A) - 1
 #merged_data$Inbreeding <- inbreeding_coefficients
-
+#
 # Step 5: Plot Inbreeding Coefficients Over Time
-#ggplot(merged_data, aes(x = DATA_NASCI, y = Inbreeding)) +
+#ggplot(merged_data, aes(x = birth_date, y = Inbreeding)) +
 #  geom_point(alpha = 0.5) +
 #  labs(title = "Inbreeding Coefficient Over Time", x = "Year of Birth", y = "Inbreeding Coefficient (F)") +
 #  theme_minimal()
