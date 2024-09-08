@@ -1,4 +1,5 @@
-# Martina_Franca_Donkey_Genetic_Analysis
+# script from the paper "Conservation and Genetic Analysis of the Endangered Martina Franca Donkey: Insights from a 15-Year Management Program"
+
 Insights into pedigree and genome-based inbreeding pattern in Martina franca donkey breed
 The following scripts were used to generate figures and tables included in the manuscript:
 
