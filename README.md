@@ -1,5 +1,6 @@
 # script from the paper "Conservation and Genetic Analysis of the Endangered Martina Franca Donkey: Insights from a 15-Year Management Program"
-**C. Pierini, V. Landi, P. De Palo**
+**C. Pierini, V. Landi, P. De Palo** 
+
 Department of Veterinary Medicine, University of Bari Aldo Moro, 70010 Valenzano, Italy
 
 Insights into pedigree and genome-based inbreeding pattern in Martina franca donkey breed
