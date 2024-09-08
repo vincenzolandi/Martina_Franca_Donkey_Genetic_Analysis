@@ -2,6 +2,8 @@
 Insights into pedigree and genome-based inbreeding pattern in Martina franca donkey breed
 The following scripts were used to generate figures and tables included in the manuscript:
 
+-------
+
 **1_data_preparation&inbreeding_analysis.R** – For scripts that involve loading, cleaning, and formatting the pedigree data;  inbreeding coefficients calculation (FPED1, FPED3) and or generating plots that visualize inbreeding trends over time; analyzing the inbreeding coefficients by province and time period.
 
 **2_inbreeding_analysis_segmented_regression.R** - This R script performs an inbreeding analysis on a pedigreed population, using segmented regression to identify breakpoints and trends in the inbreeding coefficient (FPED3) over time. It generates visualizations, calculates segment equations, and compiles the results into a Word report. The script is designed for use with pedigree data and inbreeding coefficients.
@@ -17,3 +19,5 @@ The following scripts were used to generate figures and tables included in the m
 **7_pedigree_completeness_plot.R**: This script calculates and plots Pedigree Completeness Levels (PCL) over Maximum Generations Traced (MG) for both the ancestor (ANC) and reference (RP) populations. The plot shows the comparison of pedigree completeness between the two populations
 
 **8_genetic_diversity.R**: This script prepares pedigree data and calculates various genetic diversity metrics using the purgeR and optiSel packages. It computes inbreeding coefficients, generation numbers, and effective population sizes for both the reference and total populations.
+
+-------
